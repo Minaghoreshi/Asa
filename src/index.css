@@ -1,13 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-primary;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  @apply flex flex-col gap-2 max-w-[1920px] overflow-hidden;
+}
+.header {
+  @apply bg-secondry  h-12 w-[1920px] relative text-[8px] py-[8px] flex justify-center;
+}
+.main {
+  @apply flex gap-[5px] w-full flex-wrap justify-between;
+}
+.logo {
+  @apply absolute top-[10px] left-[36px];
+}
+.card {
+  @apply bg-secondry w-[475px] h-[427px] p-[17px] text-primarytext flex flex-col gap-[11px];
+}
+.card-body {
+  @apply flex flex-col w-[441px] text-primarytext font-semibold;
+}
+.card-body-row {
+  @apply flex h-[55px] w-full  py-[7px] pl-[12px]  border-t-[0.5px] border-b-[0.5px] border-primary items-center;
+}
+.card-body-row-item {
+  @apply flex flex-col gap-[1px]  flex-1 justify-start h-full;
+}
+.card-body-line {
+  @apply w-[0.5px] h-[28px] bg-primary mr-[12px];
 }
